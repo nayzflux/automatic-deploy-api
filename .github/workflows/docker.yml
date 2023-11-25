@@ -28,4 +28,4 @@ jobs:
           context: .
           file: Dockerfile
           push: true
-          tags: nayzbysodium/soundwave-bot:latest
+          tags: nayzbysodium/automatic-deploy-api:latest
