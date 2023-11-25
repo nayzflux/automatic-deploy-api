@@ -1,9 +1,13 @@
 name: 📦 Deploy Application
 
 on:
-  push:
-    branches:
+  workflow_run:
+    workflows: ["🐋 Build Docker Image"]
+    branches: 
       - main
+    types: 
+      - completed
+  
 jobs:
 
   deploy:
