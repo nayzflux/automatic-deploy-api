@@ -15,15 +15,17 @@ jobs:
     steps:
     - name: Deploying docker compose
       uses: appleboy/ssh-action@v1.0.0
+      env:
+        DIRECTORY: ${{ secrets.DIRECTORY }}
       with:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
+        envs: 
         port: 22
+        envs: DIRECTORY
         script: |
           cd $DIRECTORY
           docker compose pull
           docker compose down
           docker compose up -d
-      env:
-        DIRECTORY: ${{ secrets.DIRECTORY }}
