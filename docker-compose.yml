@@ -2,6 +2,6 @@ version: '3'
 
 services:
   api:
-    image: automatic-deploy-api
+    image: nayzbysodium/automatic-deploy-api
     ports:
       - 3000:3000
