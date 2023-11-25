@@ -21,7 +21,6 @@ jobs:
         host: ${{ secrets.SSH_HOST }}
         username: ${{ secrets.SSH_USERNAME }}
         password: ${{ secrets.SSH_PASSWORD }}
-        envs: 
         port: 22
         envs: DIRECTORY
         script: |
