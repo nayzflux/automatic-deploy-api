@@ -41,7 +41,7 @@ const db: Database = {
 app.get('/', async (req, res) => {
     res.status(200).json({
         message: 'Hello World! ✨',
-        version: 2
+        version: 2.1
     });
 });
 
